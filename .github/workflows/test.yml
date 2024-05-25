@@ -19,7 +19,7 @@ jobs:
         uses: docker/setup-qemu-action@v2
 
       - name: Make wait-for-it.sh executable
-        uses: chmod +x ./integration-test/scripts/run-integration.sh
+        run: chmod +x ./integration-test/scripts/run-integration.sh
 
       - name: copy env.example to .env
         run: cp ./integration-test/env.example ./integration-test/.env
